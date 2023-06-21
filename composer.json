@@ -1,0 +1,19 @@
+{
+    "name": "oop/tree-exercise",
+    "description": "tree structure rep",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tree\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jahanvi",
+            "email": "jahanvi.popat@gmail.com"
+        }
+    ],
+    "require": {
+      "phpunit/phpunit": "^9.5"
+    }
+}
