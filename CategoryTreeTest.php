@@ -5,7 +5,7 @@ class CategoryTreeTest extends TestCase {
     public function testAddRootCategory(): void {
         $tree = new CategoryTree();
         $tree->addCategory("Root");
-        $this->assertEquals([], $tree->getChildren("Root"));
+        $this->assertEquals([], $tree->getParent("Root"));
     }
 
     public function testAddChildCategory(): void {

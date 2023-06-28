@@ -1,22 +1,25 @@
 <?php
 namespace Tree;
 class Category {
-    private string $leaf;
-    private ?Category $root;
+    private string $category;
+    private ?Category $parentObj;
     private array $children;
 
-    public function __construct(string $category, ?Category $root = null) {
-        $this->leaf = $category;
-        $this->root = $root;
+    public function __construct(string $category, ?Category $parentObj = null) {
+        $this->category = $category;
+        $this->parentObj = $parentObj;
         $this->children = [];
     }
 
     public function getCategoryName(): string {
-        return $this->leaf;
+        return $this->category;
     }
 
     public function getParent(): ?Category {
-        return $this->root;
+        if($this->parentObj === null){
+           $this->parentobj = null;
+        }
+        return $this->parentobj;
     }
 
     public function addChild(Category $child): void {
